@@ -1,4 +1,3 @@
-/*global chrome*/
 
 // Create an item in the context menu for a "selection"
 (function () {
@@ -7,10 +6,10 @@
 	chrome.contextMenus.create({
 		"title":    "Search Fovo", 
 		"contexts": ["selection"], 
-		"onclick":  onClickPronounce
+		"onclick":  openSearchForvoTab
 	});
 
-	function onClickPronounce(info, tab) {
+	function openSearchForvoTab(info, tab) {
 		var url = encodeURI(("http://www.forvo.com/search/" + info.selectionText));
 
 		chrome.tabs.create({
