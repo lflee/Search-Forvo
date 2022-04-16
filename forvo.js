@@ -4,7 +4,7 @@
 	"use strict";
 	
 	chrome.contextMenus.create({
-		"title":    "Search Fovo", 
+		"title":    "Search Forvo", 
 		"contexts": ["selection"], 
 		"onclick":  openSearchForvoTab
 	});
